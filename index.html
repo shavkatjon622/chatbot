@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matnni Ovozli Qilish</title>
+</head>
+<body>
+    <h1>Matnni Ovozli Qilish</h1>
+    <p id="text">Salom! Bu matnni ovoz bilan eshiting. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat explicabo nisi unde consequuntur officiis maxime labore beatae id quo. Eaque earum nihil mollitia quae sint illum! Blanditiis laboriosam quaerat ab.</p>
+    <button onclick="speakText()">Ovozli Eshiting</button>
+
+    <script>
+        function speakText() {
+            let text = document.getElementById("text").innerText;
+            let speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'uz-UZ';  // O'zbek tilida ovoz chiqarish
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>
